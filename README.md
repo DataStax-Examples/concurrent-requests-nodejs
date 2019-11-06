@@ -1,45 +1,25 @@
-# datastax-example-template
-A short few sentences describing what is the purpose of the example and what the user will learn
+# Node.js Concurrent quries examples
+## Introduction
 
-e.g.
-This application shows how to use configure your NodeJs application to connect to DDAC/Cassandra/DSE or an Apollo database at runtime.
+This repository consists of two examples of executing concurrent queries to a Cassandra cluster. Users can learn how to customize the desired level of currency suitable to their applications.
 
-Contributors: A listing of contributors to this repository linked to their github profile
+* Pre-requisites
+    * knowledge of nodejs
+    * knowledge of Promise
+    * knowledge of Datastax Cassandra nodejs driver
 
-## Objectives
-A list of the top objectives that are being demonstrated by this sample
+* Project set up
+    * make sure to include "cassandra-driver" in the package.json
 
-e.g.
-* To demonstrate how to specify at runtime between a standard (DSE/DDAC/C*) client configuration and an Apollo configuration for the same application.
-  
-## Project Layout
-A list of key files within this repo and a short 1-2 sentence description of why they are important to the project
 
-e.g.
-* app.js - The main application file which contains all the logic to switch between the configurations
 
-## How this Sample Works
-A description of how this sample works and how it demonstrates the objectives outlined above
+## Examples
+* execute-concurrent-builtin-way.js 
+    * This example showcases the driver builtin capability of executing concurrent quries.
+    * Usage: node execute-concurrent-builtin-way.js contactPoint_IP dataCenter desired_concurrency_level 
+    
 
-## Setup and Running
-
-### Prerequisites
-The prerequisites required for this application to run
-
-e.g.
-* NodeJs version 8
-* A DSE 6.7 Cluster
-* Schema added to the cluster
-
-### Running
-The steps and configuration needed to run and build this application
-
-e.g.
-To run this application use the following command:
-
-`node app.js`
-
-This will produce the following output:
-
-`Connected to cluster with 3 host(s) ["XX.XX.XX.136:9042","XX.XX.XX.137:9042","XX.XX.XX.138:9042"]`
+* execute-concurrent-promise-way.js
+    * This example demostrates concurrent queries through Promises in nodejs. 
+    * Usage: node execute-concurrent-promise-way.js contactPoint_IP dataCenter desired_concurrency_level
 
