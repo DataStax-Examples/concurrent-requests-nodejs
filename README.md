@@ -1,25 +1,32 @@
-# Node.js Concurrent quries examples
-## Introduction
+# Concurrent Requests in Node.js
+This example shows how execute multiple concurrent requests using the Node.js DataStax Driver for Apache Cassandra
 
-This repository consists of two examples of executing concurrent queries to a Cassandra cluster. Users can learn how to customize the desired level of currency suitable to their applications.
+Contributor(s): [Jorge Bay Gondra](https://github.com/jorgebay)
 
-* Pre-requisites
-    * knowledge of nodejs
-    * knowledge of Promise
-    * knowledge of Datastax Cassandra nodejs driver
+## Objectives
+- How to limit async concurrent requests using the Node.js DataStax Driver for Apache Cassandra
 
-* Project set up
-    * make sure to include "cassandra-driver" in the package.json
+## Project Layout
+- [execute-concurrent-builtin-way.js](concurrent/execute-concurrent-builtin-way.js): Inserts multiple rows in a table from an Array using the driver's built-in method `executeConcurrent()`
+- [execute-concurrent-promise-way.js](concurrent/execute-concurrent-promise-way.js): Inserts multiple rows in a table from an Array using Promises
 
+## How this works
+The Node.js programs write rows to the database asynchronously while limiting the amount of concurrent requests in flight.
 
+### Setup
+Make sure Cassandra Node.js Driver is installed
+```
+npm install cassandra-driver
+```
 
-## Examples
+### Running
 * execute-concurrent-builtin-way.js 
-    * This example showcases the driver builtin capability of executing concurrent quries.
-    * Usage: node execute-concurrent-builtin-way.js contactPoint_IP dataCenter desired_concurrency_level 
-    
+```
+node execute-concurrent-builtin-way.js <database-ip> <datacenter-name> <concurrency-level>
+```
 
 * execute-concurrent-promise-way.js
-    * This example demostrates concurrent queries through Promises in nodejs. 
-    * Usage: node execute-concurrent-promise-way.js contactPoint_IP dataCenter desired_concurrency_level
+```
+node execute-concurrent-promise-way.js <database-ip> <datacenter-name> <concurrency-level>
+```
 
