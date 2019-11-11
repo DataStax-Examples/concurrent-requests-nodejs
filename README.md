@@ -13,6 +13,7 @@ Contributor(s): [Jorge Bay Gondra](https://github.com/jorgebay)
 ## How this works
 The Node.js programs write rows to the database asynchronously while limiting the amount of concurrent requests in flight.
 
+## Setup & Running
 ### Setup
 Make sure Cassandra Node.js Driver is installed
 ```
