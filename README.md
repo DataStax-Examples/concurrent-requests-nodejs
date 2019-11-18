@@ -4,7 +4,7 @@ This example shows how execute multiple concurrent requests asynchronously with 
 Contributor(s): [Jorge Bay Gondra](https://github.com/jorgebay) - derived from [here](https://github.com/datastax/nodejs-driver/tree/master/examples/concurrent-executions)
 
 ## Objectives
-- How to limit async concurrent requests using the Node.js DataStax Driver for Apache Cassandra
+- How to limit async concurrent requests using the Node.js DataStax Driver
 
 ## Project Layout
 - [execute-concurrent-builtin-way.js](concurrent/execute-concurrent-builtin-way.js): Inserts multiple rows in a table from an Array using the driver's built-in method `executeConcurrent()`
