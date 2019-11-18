@@ -1,7 +1,7 @@
 # Concurrent Requests in Node.js
 This example shows how execute multiple concurrent requests using the Node.js DataStax Driver for Apache Cassandra
 
-Contributor(s): [Jorge Bay Gondra](https://github.com/jorgebay)
+Contributor(s): [Jorge Bay Gondra](https://github.com/jorgebay) - copied from [here](https://github.com/datastax/nodejs-driver/tree/master/examples/concurrent-executions)
 
 ## Objectives
 - How to limit async concurrent requests using the Node.js DataStax Driver for Apache Cassandra
